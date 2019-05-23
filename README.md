@@ -4,6 +4,8 @@ MHN setup configured with Splunk forwarders
 ## Overview
 Setting up a network of honeypots to better understand the types of threats servers might face and also to carry out an analysis on the types of attacks, their geolocation and the impact they might have on an enterprise network. The traffic logged by the Modern Honey Network (MHN) will then be forwarded to Splunk for further analyses.  
 
+![alt text](https://github.com/adepoju/MHN-setup/blob/master/splunk_dashboard.png "Splunk Dashboard")
+
 ## System requirement 
 The MHN can be installed on various linux distros. I will be using Ubuntu 16.04. X64 with 15GB ram, 4 CPUs, and 80GB storage. This is more than the hardware requirements [recommended](https://github.com/threatstream/mhn/wiki/Hardware-Recommendations) but i am making use of GCP so why not :) .
 
@@ -89,3 +91,15 @@ Our logfile (‘/var/log/mhn/mhn-splunk.log’) file should have been logging al
 > * Select Data input > File & Directories
 > * Navigate to the logfile
 > * Click through the rest of the steps with the defaults
+
+## Reports 
+### Top Attacks
+
+![alt text](https://github.com/adepoju/MHN-setup/blob/master/mhn_dashboard.png "MHN Top Attacks")
+
+### Attacks by Geolocation
+
+![alt text](https://github.com/adepoju/MHN-setup/blob/master/mhn_attacks.png "Attacks by Geolocation")
+
+
+Over the next few weeks, these reports will continue to build; i will work on getting value out of the data being generated.
